@@ -1,0 +1,106 @@
+/* CONTAINER */
+.detector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  max-width: 450px;
+  margin: 30px auto;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.detector-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+/* INPUT BOX */
+.input-box {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  background-color: white; /* Ensures background is white */
+  color: black; /* Sets text color to black */
+}
+
+.input-box:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6); /* Soft blue glow */
+}
+
+/* CHECK BUTTON */
+.check-button {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.check-button:hover {
+  background: linear-gradient(45deg, #0056b3, #004099);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 91, 187, 0.4);
+}
+
+.check-button:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+/* RESULT TEXT */
+.result {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/* FAKE NEWS ALERT */
+.fake {
+  color: #ff3b3b;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+  100% { text-shadow: 0 0 15px rgba(255, 0, 0, 0.8); }
+}
+
+/* REAL NEWS */
+.real {
+  color: #2ecc71;
+  text-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+
+/* ERROR MESSAGE */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .detector-container {
+      max-width: 90%;
+      padding: 20px;
+  }
+  .input-box, .check-button {
+      font-size: 14px;
+  }
+}
